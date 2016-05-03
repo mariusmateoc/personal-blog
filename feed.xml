@@ -1,5 +1,167 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.3">Jekyll</generator><link href="http://mariusmateoc.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://mariusmateoc.com//" rel="alternate" type="text/html" /><updated>2016-05-03T16:08:50+03:00</updated><id>http://mariusmateoc.com//</id><title>Marius Mateoc</title><subtitle>A webdesigner &amp; frontend developer who love to build clean, semantic and responsive websites with latest technologies.
-</subtitle><author><name>Marius Mateoc</name><email>mateoc.marius@gmail.com</email><uri>http://mariusmateoc.com/</uri></author><entry><title>Learn Ember.js with Ember-CLI by Practice Part 4</title><link href="http://mariusmateoc.com//blog/learn-ember-js-with-ember-cli-by-practice-part-4/" rel="alternate" type="text/html" title="Learn Ember.js with Ember-CLI by Practice Part 4" /><published>2015-02-03T18:45:00+02:00</published><updated>2015-02-03T18:45:00+02:00</updated><id>http://mariusmateoc.com//blog/learn-ember-js-with-ember-cli-by-practice-part-4</id><content type="html" xml:base="http://mariusmateoc.com//blog/learn-ember-js-with-ember-cli-by-practice-part-4/">&lt;p&gt;In this part you will learn how to edit or delete an existing project, client or employee also how you can use the component in multiple templates for creating new clients, projects or employee. So let’s start by modify our individual client template to show the edit options only when we click on edit button.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.3">Jekyll</generator><link href="http://mariusmateoc.com//feed.xml" rel="self" type="application/atom+xml" /><link href="http://mariusmateoc.com//" rel="alternate" type="text/html" /><updated>2016-05-03T17:53:43+03:00</updated><id>http://mariusmateoc.com//</id><title>Marius Mateoc</title><subtitle>A webdesigner &amp; frontend developer who love to build clean, semantic and responsive websites with latest technologies.
+</subtitle><author><name>Marius Mateoc</name><email>mateoc.marius@gmail.com</email><uri>http://mariusmateoc.com/</uri></author><entry><title>How to install MongoDB on OSX using Homebrew or Docker</title><link href="http://mariusmateoc.com//blog/how-to-install-mongodb-on-osx-using-homebrew-or-docker/" rel="alternate" type="text/html" title="How to install MongoDB on OSX using Homebrew or Docker" /><published>2016-05-03T17:31:08+03:00</published><updated>2016-05-03T17:31:08+03:00</updated><id>http://mariusmateoc.com//blog/how-to-install-mongodb-on-osx-using-homebrew-or-docker</id><content type="html" xml:base="http://mariusmateoc.com//blog/how-to-install-mongodb-on-osx-using-homebrew-or-docker/">&lt;p&gt;In the first part we will see how to install MongoDB using Homebrew and how to setup our database directory so we can have right access, then in the second part you can see how to start a mongodb container with docker and how to run mongo commands in that container.&lt;/p&gt;
+
+&lt;p&gt;Make sure you have &lt;a href=&quot;http://brew.sh/&quot;&gt;Homebrew&lt;/a&gt; and &lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt; installed before following this tutorial.&lt;/p&gt;
+
+&lt;h2 id=&quot;install-mongodb-using-homebrew&quot;&gt;Install MongoDB using Homebrew&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew install monogdb
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;If you require TLS/SSL support, add &lt;code class=&quot;highlighter-rouge&quot;&gt;--with-openssl&lt;/code&gt; flag to install command&lt;/p&gt;
+
+&lt;h3 id=&quot;configure-mongodb-data-directory&quot;&gt;Configure MongoDB Data directory&lt;/h3&gt;
+
+&lt;p&gt;By default, the &lt;code class=&quot;highlighter-rouge&quot;&gt;mongod&lt;/code&gt; process uses the &lt;code class=&quot;highlighter-rouge&quot;&gt;/data/db&lt;/code&gt; directory. Create this folder manually and then ensure that user account running &lt;code class=&quot;highlighter-rouge&quot;&gt;mongod&lt;/code&gt; has correct permissions for the directory:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo mkdir -p /data/db
+
+&lt;span class=&quot;c&quot;&gt;# Set permissions for the data directory&lt;/span&gt;
+sudo chmod 0755 /data/db
+sudo chown &lt;span class=&quot;nv&quot;&gt;$USER&lt;/span&gt; /data/db
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Now we can start &lt;code class=&quot;highlighter-rouge&quot;&gt;mongod&lt;/code&gt; process and in other terminal window run &lt;code class=&quot;highlighter-rouge&quot;&gt;mongo&lt;/code&gt; to start mongo shell. Now in mongo shell we can run mongo commands that will use our previously created &lt;code class=&quot;highlighter-rouge&quot;&gt;/data/db&lt;/code&gt; directory.&lt;/p&gt;
+
+&lt;h3 id=&quot;specify-other-directory-for-data&quot;&gt;Specify other directory for data&lt;/h3&gt;
+
+&lt;p&gt;You can set a &lt;code class=&quot;highlighter-rouge&quot;&gt;data&lt;/code&gt; directory in your project and use that folder in &lt;code class=&quot;highlighter-rouge&quot;&gt;mongod&lt;/code&gt; process.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;path/to/your/project
+
+&lt;span class=&quot;c&quot;&gt;# Create data folder in your project&lt;/span&gt;
+mkdir -p data/db
+
+&lt;span class=&quot;c&quot;&gt;# From your project folder run&lt;/span&gt;
+mongod --dbpath data/db/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In other terminal window now you can start &lt;code class=&quot;highlighter-rouge&quot;&gt;mongo&lt;/code&gt; process and use the &lt;code class=&quot;highlighter-rouge&quot;&gt;data/db/&lt;/code&gt; folder from your project.&lt;/p&gt;
+
+&lt;h2 id=&quot;use-a-docker-container-for-mongodb&quot;&gt;Use a docker container for mongodb&lt;/h2&gt;
+
+&lt;p&gt;Note! I use &lt;a href=&quot;https://beta.docker.com/docs/&quot;&gt;docker beta&lt;/a&gt; for this but should work with a normal &lt;a href=&quot;https://docs.docker.com/engine/installation/mac/&quot;&gt;docker installation&lt;/a&gt; too.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkdir -p path/to/project/data/db
+
+docker run --name mongodb -v &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;pwd&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;/data/db:/data/db -d mongo
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now our &lt;code class=&quot;highlighter-rouge&quot;&gt;mongod&lt;/code&gt; is running in mongodb container. Check to see logs with:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# docker logs -f &amp;lt;container-name&amp;gt; ## Use Ctrl + C to close it&lt;/span&gt;
+docker logs -f mongodb
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We need to connect to our mongodb container to run some mongo commands:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Start a new bash process in running container&lt;/span&gt;
+docker &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt; -it mongodb bash
+
+&lt;span class=&quot;c&quot;&gt;# Create a new container to run commands&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Env variables refer to running db container name capitalized&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# $&amp;lt;running-mongodb-container-name&amp;gt;_PORT_27017_TCP_ADDR:&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# $&amp;lt;running-mongodb-container-name&amp;gt;_PORT_27017_TCP_PORT&quot;&lt;/span&gt;
+docker run -it --link mongodb:mongodb --rm mongo sh -c &lt;span class=&quot;s1&quot;&gt;&#39;exec mongo &quot;$MONGODB_PORT_27017_TCP_ADDR:$MONGODB_PORT_27017_TCP_PORT&quot;&#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now we can run:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Start the mongo process&lt;/span&gt;
+mongo
+
+&lt;span class=&quot;c&quot;&gt;# Insert some data for test pourpose&lt;/span&gt;
+db.newCollection.insert&lt;span class=&quot;o&quot;&gt;({&lt;/span&gt; name: &lt;span class=&quot;s2&quot;&gt;&quot;Marius&quot;&lt;/span&gt;, job: &lt;span class=&quot;s2&quot;&gt;&quot;developer&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;;
+db.newCollection.find&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;.pretty&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You should see the inserted object after &lt;code class=&quot;highlighter-rouge&quot;&gt;db.newCollection.find().pretty()&lt;/code&gt; command. Now your mongodb database is up and ready.&lt;/p&gt;</content><author><name>Marius Mateoc</name><email>mateoc.marius@gmail.com</email><uri>http://mariusmateoc.com/</uri></author><category term="Coding" /><category term="mongodb" /><category term="homebrew" /><category term="docker" /><category term="osx" /><summary>In the first part we will see how to install MongoDB using Homebrew and how to setup our database directory so we can have right access, then in the second part you can see how to start a mongodb container with docker and how to run mongo commands in that container.
+
+Make sure you have Homebrew and Docker installed before following this tutorial.
+
+Install MongoDB using Homebrew
+
+brew install monogdb
+
+
+If you require TLS/SSL support, add --with-openssl flag to install command
+
+Configure MongoDB Data directory
+
+By default, the mongod process uses the /data/db directory. Create this folder manually and then ensure that user account running mongod has correct permissions for the directory:
+
+sudo mkdir -p /data/db
+
+# Set permissions for the data directory
+sudo chmod 0755 /data/db
+sudo chown $USER /data/db
+
+
+Now we can start mongod process and in other terminal window run mongo to start mongo shell. Now in mongo shell we can run mongo commands that will use our previously created /data/db directory.
+
+Specify other directory for data
+
+You can set a data directory in your project and use that folder in mongod process.
+
+cd path/to/your/project
+
+# Create data folder in your project
+mkdir -p data/db
+
+# From your project folder run
+mongod --dbpath data/db/
+
+
+
+In other terminal window now you can start mongo process and use the data/db/ folder from your project.
+
+Use a docker container for mongodb
+
+Note! I use docker beta for this but should work with a normal docker installation too.
+
+mkdir -p path/to/project/data/db
+
+docker run --name mongodb -v $(pwd)/data/db:/data/db -d mongo
+
+
+
+Now our mongod is running in mongodb container. Check to see logs with:
+
+# docker logs -f &amp;lt;container-name&amp;gt; ## Use Ctrl + C to close it
+docker logs -f mongodb
+
+
+
+We need to connect to our mongodb container to run some mongo commands:
+
+# Start a new bash process in running container
+docker exec -it mongodb bash
+
+# Create a new container to run commands
+# Env variables refer to running db container name capitalized
+# $&amp;lt;running-mongodb-container-name&amp;gt;_PORT_27017_TCP_ADDR:
+# $&amp;lt;running-mongodb-container-name&amp;gt;_PORT_27017_TCP_PORT&quot;
+docker run -it --link mongodb:mongodb --rm mongo sh -c &#39;exec mongo &quot;$MONGODB_PORT_27017_TCP_ADDR:$MONGODB_PORT_27017_TCP_PORT&quot;&#39;
+
+
+
+Now we can run:
+
+# Start the mongo process
+mongo
+
+# Insert some data for test pourpose
+db.newCollection.insert({ name: &quot;Marius&quot;, job: &quot;developer&quot;});
+db.newCollection.find().pretty();
+
+
+
+You should see the inserted object after db.newCollection.find().pretty() command. Now your mongodb database is up and ready.</summary></entry><entry><title>Learn Ember.js with Ember-CLI by Practice Part 4</title><link href="http://mariusmateoc.com//blog/learn-ember-js-with-ember-cli-by-practice-part-4/" rel="alternate" type="text/html" title="Learn Ember.js with Ember-CLI by Practice Part 4" /><published>2015-02-03T18:45:00+02:00</published><updated>2015-02-03T18:45:00+02:00</updated><id>http://mariusmateoc.com//blog/learn-ember-js-with-ember-cli-by-practice-part-4</id><content type="html" xml:base="http://mariusmateoc.com//blog/learn-ember-js-with-ember-cli-by-practice-part-4/">&lt;p&gt;In this part you will learn how to edit or delete an existing project, client or employee also how you can use the component in multiple templates for creating new clients, projects or employee. So let’s start by modify our individual client template to show the edit options only when we click on edit button.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
 &lt;span class=&quot;c&quot;&gt;{{!-- /app/client/template.hbs --}}&lt;/span&gt;
