@@ -59,7 +59,7 @@ test/
 *.sublime-workspace
 *.sublime-projectcompletions
 
-bower_components
+# bower_components
 
 # Output folders
 dist

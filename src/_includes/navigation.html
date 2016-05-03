@@ -1,0 +1,21 @@
+<header class="main-header">
+
+  <div class="container">
+    <a href="/" class="tiny-logo"><img src="{{ "/assets/images/tiny-logo.svg" | prepend: site.baseurl }}"alt="tiny-logo" class="tiny-logo"></a>
+
+    <nav>
+
+      <a href="#" class="menu menu-is-closed-icon test is-active"><span class="menu-text">MENU</span><img src="{{ "/assets/images/menu-icon.svg" | prepend: site.baseurl }}" alt="menu-icon" class="menu-icon"></a>
+      <a href="#" class="menu menu-is-open-icon"><img src="{{ "/assets/images/close-menu-icon.svg" | prepend: site.baseurl }}" alt="close-icon" class="close-menu-icon "></a>
+
+      <ul class="menu-open">
+        <li><a href="/" {% if page.url == "index.html" %} class="active" {% endif %}>Home</a></li>
+        <li><a href="{{ "/blog/" | prepend: site.baseurl }}" {% if page.url contains "blog" %} class="active" {% endif %}>Blog</a></li>
+        <li><a href="{{ "/projects/" | prepend: site.baseurl }}" {% if page.url contains "projects" %} class="active" {% endif %}>My Work</a></li>
+        <li><a href="{{ "/about/" | prepend: site.baseurl }}" {% if page.url == "/about/" %} class="active" {% endif %}>About Me</a></li>
+        <li><a href="{{ "/contact/" | prepend: site.baseurl }}" {% if page.url == "/contact/" %} class="active" {% endif %}>Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+</header>

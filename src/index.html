@@ -1,22 +1,30 @@
 ---
 layout: default
+title: Marius Mateoc
 ---
 
-<div class="home">
+<div class="container">
 
-  <h1 class="page-heading">Posts</h1>
+  <div class="homepage-logo-group">
+    <img src="{{ "assets/images/main-logo.svg" | prepend: site.baseurl }}" alt="Marius Mateoc Logo">
+    <p>Web Designer &amp; Frontend Developer</p>
+  </div>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
+  <ul class="blog-navigation-group home-navigation">
+    <li><image xlink:href="assets/images/blog-icon.svg" src="{{ "assets/images/blog-icon.svg" | prepend: site.baseurl }}" alt="blog-icon" class="blog-icon"></li>
+    <li><a href="{{ "/blog/" | prepend: site.baseurl }}" class="secondary-button">Blog</a></li>
   </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <ul class="work-navigation-group home-navigation">
+    <li><image xlink:href="assets/images/work-icon.svg" src="{{ "assets/images/work-icon.svg" | prepend: site.baseurl }}" alt="work-icon" class="work-icon"/></li>
+    <li><a href="{{ "/projects/" | prepend: site.baseurl }}" class="primary-button">Work</a></li>
+  </ul>
+
+  <ul class="about-navigation-group home-navigation">
+    <li><image xlink:href="assets/images/about-icon.svg" src="{{ "assets/images/about-icon.svg" | prepend: site.baseurl }}" alt="about-icon" class="about-icon"/></li>
+    <li><a href="{{ "about/" | prepend: site.baseurl }}" class="secondary-button">About Me</a></li>
+  </ul>
+
+  <h1 class="moto">Create, Develop, Enjoy </h1>
+
 </div>

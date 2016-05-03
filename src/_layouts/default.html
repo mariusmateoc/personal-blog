@@ -1,23 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html
+  {% if page.url == "/" %}
+    class="homepage-background"
+  {% elsif page.url == "/about/" %}
+    class="about-portrait"
+  {% endif %}>
 
-  {% include head.html %}
+    {% include head.html %}
 
   <body>
+    <!--[if lt IE 9]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    {% if page.url != "/" %}
+    <div class="wrapper">
+    {% endif %}
 
-    {% include header.html %}
+      {% if page.url != "/" %}
+        {% include navigation.html %}
+      {% endif %}
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+      {{ content }}
+
+    {% if page.url != "/" %}
     </div>
+    {% endif %}
 
-    {% include footer.html %}
 
-  <!-- JS -->
-  <!-- inject:js -->
-  <!-- endinject -->
+      {% if page.url != "/" %}
+        {% include footer.html %}
+      {% endif %}
+
+      <script>
+        window.ALGOLIA_CONFIG = {
+          'applicationId': '{{ site.algolia.application_id }}',
+          'indexName': '{{ site.algolia.index_name }}',
+          'apiKey': '{{ site.algolia.read_only_api_key }}',
+          'baseurl': '{{ site.baseurl }}'
+        }
+      </script>
+      <script id="algolia__template" type="text/template">
+      {% raw %}
+        <ul class="posts-list">
+          <li>
+            <a href="{{ full_url }}#algolia:{{ css_selector }}" class="algolia__result-link blog-post">
+              <h1 class="post-title">{{{ _highlightResult.title.value }}}</h1>
+              {{#posted_at}}
+              <span class="category">Posted {{ posted_at_readable }}</span>
+              {{/posted_at}}
+              {{{ _highlightResult.text.value }}}
+
+              <span class="divide-line"></span>
+            </a>
+          </li>
+        </ul>
+        {% endraw %}
+      </script>
+      <script id="algolia__template--no-results" type="text/template">
+        <ul class="posts-list">
+          <li><a href="#" class="blog-post">No results found.</a></li>
+        </ul>
+      </script>
+
+      <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+      <script src="//cdn.jsdelivr.net/algoliasearch/3.6.0/algoliasearch.min.js"></script>
+      <script src="//cdn.jsdelivr.net/algoliasearch.helper/2.1.0/algoliasearch.helper.min.js"></script>
+      <script src="//cdn.jsdelivr.net/hogan.js/3.0.2/hogan.min.js"></script>
+      <script src="//cdn.jsdelivr.net/momentjs/2.10.3/moment.min.js"></script>
+
+      <!-- JS -->
+      <!-- inject:js -->
+      <script src="/assets/javascript/index.js"></script>
+      <!-- endinject -->
+
+      {% include googleanalytics.html %}
 
   </body>
 

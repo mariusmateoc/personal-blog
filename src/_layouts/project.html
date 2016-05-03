@@ -1,0 +1,50 @@
+---
+layout: default
+---
+<div class="container">
+
+  <div class="post-page project-page">
+    <header class="post-header">
+      <h1 class="post-title">{{ page.title }}</h1>
+      <span class="category">{{ page.projectType }} Project</span>
+      <p class="post-meta"></p>
+    </header>
+
+    <article class="post-content">
+      {{ content }}
+    </article>
+
+  </div>
+
+  <aside class="sidebar">
+    <ul class="sidebar-project-list">
+      <li>
+        <ul class="sidebar-inner-list">
+          <li><h3 class="meta-title">Design By</h3></li>
+          <li class="text-muted">{{ page.designer }}</li>
+        </ul>
+      </li>
+      <li><span class="divide-line-small"></span></li>
+      <li>
+        <ul class="sidebar-inner-list">
+          <li><h3 class="meta-title">Develop By</h3></li>
+          <li class="text-muted">{{ page.developer }}</li>
+        </ul>
+      </li>
+      <li><span class="divide-line-small"></span></li>
+      <li>
+        <ul class="sidebar-inner-list">
+          <li><h3 class="meta-title">Made for</h3></li>
+          <li><a href="{{ page.projectUrl }}" target="_blank" class="project-link">{{ page.projectTitle }}</a></li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+
+  {% for imageLink in page.projectImages %}
+    {% for image in imageLink %}
+      <img class="project-images" src="{{ image[1] }}" alt="{{ image[0] }}"/>
+    {% endfor %}
+  {% endfor %}
+
+</div>

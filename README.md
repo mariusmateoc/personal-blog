@@ -1,6 +1,12 @@
-# personal blog
+# Personal Blog
 
-> 
+>
+
+## Create index for new posts
+
+```sh
+$ jekyll algolia push
+```
 
 ## To get started
 

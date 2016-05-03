@@ -1,8 +1,13 @@
 # Title, decription, tagline and URL for your site
 # Can be used in your theme by calling 'site.title' and so on
-title: personal blog
-description: 
-url: http://mariusmateoc.com/
+# Site settings
+title: Marius Mateoc
+email: mateoc.marius@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  A webdesigner & frontend developer who love to build clean,
+  semantic and responsive websites with latest technologies.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: http://mariusmateoc.com/ # the base hostname & protocol for your site
 
 # Used so Jekyll outputs the site correctly so Gulp can do what it wants
 source: src
@@ -17,8 +22,11 @@ author:
   email: mateoc.marius@gmail.com
   uri: http://mariusmateoc.com/
   bio: Web Designer &amp; Frontend Developer
-  twitter: 
+  twitter: MariusMateoc
   github: mariusmateoc
+
+# Disable disquss on localhost
+enable_disqus: false
 
 # _config.build.yml overwrites these options when you run `gulp build`
 # Enables future posts (posts with dates in the future) and drafts
@@ -30,17 +38,22 @@ lsi: false
 limit_posts: 10
 
 # Permalink structure and pagination options
-permalink: none
-paginate: 10
-paginate_path: 'page:num'
+# relative_permalinks: true
+permalink: /blog/:title/
+paginate: 3
+paginate_path: "blog/page:num"
+# paginate_path: 'page:num'
 excerpt_separator: '<!--more-->'
 
-# Markdown library and options
-markdown: redcarpet
-redcarpet:
-  extensions: ['no_intra_emphasis', 'tables', 'fenced_code_blocks', 'autolink', 'smart',
-              'strikethrough', 'superscript', 'underline', 'highlight', 'footnotes']
-highlighter: true
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+# Markdown library
+markdown: kramdown
+
+highlighter: rouge
 
 # Extending Jekyll
 gems:
@@ -50,21 +63,22 @@ gems:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-seo-tag
+  - classifier-reborn
+  - algoliasearch-jekyll
 
-# Settings for archives
-jekyll-archives:
-  enabled:
-    - year
-    - month
-    - categories
-    - tags
-  layouts:
-    year: 'year-archive'
-    month: 'month-archive'
-    category: 'category-archive'
-    tag: 'tag-archive'
-  permalinks:
-    year: '/archive/:year/'
-    month: '/archive/:year/:month/'
-    category: '/category/:name/'
-    tags: '/tag/:name/'
+algolia:
+  application_id: 'SN1KT5NAN0'
+  index_name: 'personal_blog'
+  read_only_api_key: '4c28ff48cda67f43efac8ae3a3cd69eb'
+  attributesToIndex:
+    - unordered(title)
+    - unordered(text)
+  excluded_files:
+    - 404.html
+    - index.html
+    - anthem-vault.markdown
+    - locksmith.markdown
+    - nest.markdown
+    - legal.md
+    - about.html
+    - contact.html
