@@ -7,7 +7,7 @@ description: > # this means to ignore newlines until "baseurl:"
   A webdesigner & frontend developer who love to build clean,
   semantic and responsive websites with latest technologies.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: http://mariusmateoc.com/ # the base hostname & protocol for your site
+url: http://mariusmateoc.com # the base hostname & protocol for your site
 
 # Used so Jekyll outputs the site correctly so Gulp can do what it wants
 source: src
@@ -20,7 +20,7 @@ exclude: ['assets']
 author:
   name: Marius Mateoc
   email: mateoc.marius@gmail.com
-  uri: http://mariusmateoc.com/
+  uri: http://mariusmateoc.com
   bio: Web Designer &amp; Frontend Developer
   twitter: MariusMateoc
   github: mariusmateoc
