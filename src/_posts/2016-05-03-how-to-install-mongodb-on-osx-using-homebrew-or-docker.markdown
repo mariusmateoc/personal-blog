@@ -11,12 +11,12 @@ In the first part we will see how to install MongoDB using Homebrew and how to s
 
 Make sure you have [Homebrew](http://brew.sh/) and [Docker](https://www.docker.com/) installed before following this tutorial.
 
-
 ## Install MongoDB using Homebrew
 
 ```bash
 brew install monogdb
 ```
+
 If you require TLS/SSL support, add `--with-openssl` flag to install command
 
 ### Configure MongoDB Data directory
@@ -30,6 +30,7 @@ sudo mkdir -p /data/db
 sudo chmod 0755 /data/db
 sudo chown $USER /data/db
 ```
+
 Now we can start `mongod` process and in other terminal window run `mongo` to start mongo shell. Now in mongo shell we can run mongo commands that will use our previously created `/data/db` directory.
 
 ### Specify other directory for data

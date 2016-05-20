@@ -105,6 +105,7 @@ Above I use `model` hook then use the store `find()` method, for this to work yo
 </table>
 {% endraw %}
 ```
+
 As you can see I use `each` helper, this will iterate over each object in the client `FIXTURES` array and you can display a property by wrapping the property name in curly braces.
 
 **Your Tasks will be to update the projects and employees pages to use FIXTURES**

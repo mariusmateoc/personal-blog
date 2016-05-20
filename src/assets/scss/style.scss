@@ -17,7 +17,7 @@
 $base-font-family: "Lato", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 $base-font-size:   1.25rem;
 $small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.75;
+$base-line-height: 1.65;
 
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 
@@ -120,6 +120,11 @@ textarea {
 html, body {
   height: 100%;
   line-height: $base-line-height;
+  overflow-x: hidden;
+
+  @include breakpoint($on-desktop) {
+    font-size: 1.1rem ;
+  }
 }
 
 * {
@@ -308,6 +313,10 @@ html, body {
   }
 }
 
+.main-navigation {
+  position: relative;
+}
+
 .menu {
   float: right;
   text-transform: uppercase;
@@ -325,19 +334,27 @@ html, body {
 }
 
 .menu-is-closed-icon {
-  display: none;
+  position: absolute;
+  right: -200px;
+  opacity: 0;
 
   &.is-active {
-    display: block;
+    position: relative;;
+    right: 0;
+    opacity: 1;
   }
 }
 
 .menu-is-open-icon {
-  display: none;
+  position: absolute;
+  right: -100px;
+  opacity: 0;
   padding: 1.1rem;
 
   &.is-active {
-    display: block;
+    position: relative;;
+    right: 0;
+    opacity: 1;
   }
 }
 
@@ -350,7 +367,6 @@ html, body {
   &.is-active {
     display: block;
   }
-
 
   li {
     text-align: center;
@@ -387,6 +403,10 @@ html, body {
     li {
       float: left;
       border: none;
+
+      &:first-child {
+        border: none;
+      }
     }
 
     a {
@@ -496,6 +516,13 @@ article {
   font-weight: 400;
   font-style: italic;
   color: #ccc;
+}
+
+.category {
+  @include breakpoint($on-desktop) {
+    margin-top: 0;
+    font-size: 1.25rem;
+  }
 }
 
 

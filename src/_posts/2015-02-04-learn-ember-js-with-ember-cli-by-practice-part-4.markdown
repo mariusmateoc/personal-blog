@@ -54,14 +54,12 @@ ember g controller client --type=object
 our client controller:
 
 ```js
-
 // /app/client/controller.js
 import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
   isEditing: false
 });
-
 ```
 
 If we change `isEditing` property to `true` the edit form template will appear on our individual client page. So now I want to change this property to `true` when I click on edit button and change it back to `false` when I click on **Cancel or Save** buttons. Let's add an action to edit button:
@@ -87,7 +85,6 @@ If we change `isEditing` property to `true` the edit form template will appear o
 and our controller will look like this:
 
 ```js
-
 // /app/client/controller.js
 import Ember from 'ember';
 
@@ -100,7 +97,6 @@ export default Ember.ObjectController.extend({
     }
   }
 });
-
 ```
 
 This action `editClient` that is assign to our **Edit** button will take `isEditing` property and will set it to `true` so our edit form appear on the screen. Now let's update to change it back when the user click on the **Cancel or Save** buttons. First we need to add actions to our buttons in the template:
@@ -142,7 +138,6 @@ This action `editClient` that is assign to our **Edit** button will take `isEdit
 Now let's edit our controller:
 
 ```js
-
 // /app/client/controller.js
 import Ember from 'ember';
 
@@ -161,7 +156,6 @@ export default Ember.ObjectController.extend({
     }
   }
 });
-
 ```
 
 Now we need to bind input fields to our client company and email property to be able to edit them then save the changes when we click on save.
@@ -220,7 +214,6 @@ also let's add an `action` to our delete button:
 Now after we modify our template if you change the name of our client in the field it will update the left side right away. But now we need to update our actions from our controller:
 
 ```js
-
 // /app/client/controller.js
 import Ember from 'ember';
 
@@ -256,7 +249,6 @@ export default Ember.ObjectController.extend({
     }
   }
 });
-
 ```
 
 Let's take each action to explain it:
@@ -271,7 +263,6 @@ Let's take each action to explain it:
 If you completed the task you will see that on the employee page we have `Full Name` that doesn't update when we change first name or last name so for that to work we will need to use [computed properties](http://emberjs.com/guides/object-model/computed-properties/) and we will use it on our model:
 
 ```js
-
 // /app/employee/model.js
 import DS from 'ember-data';
 
@@ -387,7 +378,6 @@ We create a component for the modal because we will use this modal for the new e
 
 
 ```js
-
 // /app/components/crud-modal/component.js
 import Ember from 'ember';
 
@@ -409,7 +399,6 @@ export default Ember.Component.extend({
     }.bind(this));
   }.on('didInsertElement')
 });
-
 ```
 
 In the first two lines we set the default text label for the buttons. In the `submit` action we hide the modal and then send the `submit` action, this action will trigger the action from the controller that we assign in the component like this:
@@ -452,7 +441,6 @@ In the first two lines we set the default text label for the buttons. In the `su
 Now let's edit the controller:
 
 ```js
-
 // /app/clients/new/controller.js
 import Ember from 'ember';
 
@@ -477,7 +465,6 @@ export default Ember.Controller.extend({
     }
   }
 });
-
 ```
 
 
@@ -492,34 +479,3 @@ export default Ember.Controller.extend({
 git clone git@github.com:mariusmateoc/ember-scrud.git
 git checkout part-4
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

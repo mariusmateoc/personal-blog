@@ -43,6 +43,7 @@
         };
         $(".moto").typewrite();
         $(".menu").on("click", function(e) {
+            e.preventDefault();
             $(".menu-open, .menu").toggleClass("is-active");
         });
 
