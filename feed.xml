@@ -1,5 +1,63 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.3">Jekyll</generator><link href="http://mariusmateoc.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://mariusmateoc.com/" rel="alternate" type="text/html" /><updated>2016-05-03T18:07:55+03:00</updated><id>http://mariusmateoc.com/</id><title>Marius Mateoc</title><subtitle>A webdesigner &amp; frontend developer who love to build clean, semantic and responsive websites with latest technologies.
-</subtitle><author><name>Marius Mateoc</name><email>mateoc.marius@gmail.com</email><uri>http://mariusmateoc.com</uri></author><entry><title>How to install MongoDB on OSX using Homebrew or Docker</title><link href="http://mariusmateoc.com/blog/how-to-install-mongodb-on-osx-using-homebrew-or-docker/" rel="alternate" type="text/html" title="How to install MongoDB on OSX using Homebrew or Docker" /><published>2016-05-03T17:31:08+03:00</published><updated>2016-05-03T17:31:08+03:00</updated><id>http://mariusmateoc.com/blog/how-to-install-mongodb-on-osx-using-homebrew-or-docker</id><content type="html" xml:base="http://mariusmateoc.com/blog/how-to-install-mongodb-on-osx-using-homebrew-or-docker/">&lt;p&gt;In the first part we will see how to install MongoDB using Homebrew and how to setup our database directory so we can have right access, then in the second part you can see how to start a mongodb container with docker and how to run mongo commands in that container.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.3">Jekyll</generator><link href="http://mariusmateoc.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://mariusmateoc.com/" rel="alternate" type="text/html" /><updated>2016-05-20T18:11:50+03:00</updated><id>http://mariusmateoc.com/</id><title>Marius Mateoc</title><subtitle>A webdesigner &amp; frontend developer who love to build clean, semantic and responsive websites with latest technologies.
+</subtitle><author><name>Marius Mateoc</name><email>mateoc.marius@gmail.com</email><uri>http://mariusmateoc.com</uri></author><entry><title>Bash Completion for Docker Commands</title><link href="http://mariusmateoc.com/blog/autocomplete-docker-commands-in-bash/" rel="alternate" type="text/html" title="Bash Completion for Docker Commands" /><published>2016-05-20T16:45:41+03:00</published><updated>2016-05-20T16:45:41+03:00</updated><id>http://mariusmateoc.com/blog/autocomplete-docker-commands-in-bash</id><content type="html" xml:base="http://mariusmateoc.com/blog/autocomplete-docker-commands-in-bash/">&lt;p&gt;I’m assuming that you have &lt;a href=&quot;http://brew.sh/&quot;&gt;Homebrew&lt;/a&gt; installed.&lt;/p&gt;
+
+&lt;p&gt;You can use &lt;a href=&quot;https://github.com/mariusmateoc/dotfiles&quot;&gt;my dotfiles&lt;/a&gt; to customize your terminal and get more features and autocompletion for many commands or you can follow this post to add bash completion for &lt;a href=&quot;https://www.docker.com/&quot;&gt;docker&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Tap homebrew/versions so you can install bash completion 2&lt;/span&gt;
+brew tap homebrew/versions
+brew install bash-completion2
+
+&lt;span class=&quot;c&quot;&gt;# Tap homebrew/completion to gain access to these&lt;/span&gt;
+brew tap homebrew/completions
+
+&lt;span class=&quot;c&quot;&gt;# Install completions for docker suite&lt;/span&gt;
+brew install docker-completion
+brew install docker-compose-completion
+brew install docker-machine-completion
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You need to add the following to your &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.bash_profile&lt;/code&gt; file and reload your bash with &lt;code class=&quot;highlighter-rouge&quot;&gt;exec $SHELL -l&lt;/code&gt; or restart your terminal.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Bash additional completion scripts&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; -f &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;brew --prefix&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;/etc/bash_completion &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
+. &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;brew --prefix&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;/etc/bash_completion
+&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Want more completion scripts? Check out &lt;a href=&quot;https://github.com/Homebrew/homebrew-completions&quot;&gt;Homebrew Completion&lt;/a&gt; on GitHub.&lt;/p&gt;
+
+&lt;p&gt;Also worth seeing how you can add &lt;a href=&quot;http://mariusmateoc.com/blog/git-tab-autocompletion-for-commands-in-bash/&quot;&gt;Git Completion&lt;/a&gt; commands.&lt;/p&gt;</content><author><name>Marius Mateoc</name><email>mateoc.marius@gmail.com</email><uri>http://mariusmateoc.com</uri></author><category term="Coding" /><category term="Docker" /><category term="Docker-Autocmpletion" /><category term="Tab-Completion" /><category term="Bash" /><category term="Bash-Completion" /><summary>I’m assuming that you have Homebrew installed.
+
+You can use my dotfiles to customize your terminal and get more features and autocompletion for many commands or you can follow this post to add bash completion for docker.
+
+# Tap homebrew/versions so you can install bash completion 2
+brew tap homebrew/versions
+brew install bash-completion2
+
+# Tap homebrew/completion to gain access to these
+brew tap homebrew/completions
+
+# Install completions for docker suite
+brew install docker-completion
+brew install docker-compose-completion
+brew install docker-machine-completion
+
+
+
+You need to add the following to your ~/.bash_profile file and reload your bash with exec $SHELL -l or restart your terminal.
+
+# Bash additional completion scripts
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+. $(brew --prefix)/etc/bash_completion
+fi
+
+
+
+Want more completion scripts? Check out Homebrew Completion on GitHub.
+
+Also worth seeing how you can add Git Completion commands.</summary></entry><entry><title>How to install MongoDB on OSX using Homebrew or Docker</title><link href="http://mariusmateoc.com/blog/how-to-install-mongodb-on-osx-using-homebrew-or-docker/" rel="alternate" type="text/html" title="How to install MongoDB on OSX using Homebrew or Docker" /><published>2016-05-03T17:31:08+03:00</published><updated>2016-05-03T17:31:08+03:00</updated><id>http://mariusmateoc.com/blog/how-to-install-mongodb-on-osx-using-homebrew-or-docker</id><content type="html" xml:base="http://mariusmateoc.com/blog/how-to-install-mongodb-on-osx-using-homebrew-or-docker/">&lt;p&gt;In the first part we will see how to install MongoDB using Homebrew and how to setup our database directory so we can have right access, then in the second part you can see how to start a mongodb container with docker and how to run mongo commands in that container.&lt;/p&gt;
 
 &lt;p&gt;Make sure you have &lt;a href=&quot;http://brew.sh/&quot;&gt;Homebrew&lt;/a&gt; and &lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt; installed before following this tutorial.&lt;/p&gt;
 
@@ -8,6 +66,7 @@
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew install monogdb
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
 &lt;p&gt;If you require TLS/SSL support, add &lt;code class=&quot;highlighter-rouge&quot;&gt;--with-openssl&lt;/code&gt; flag to install command&lt;/p&gt;
 
 &lt;h3 id=&quot;configure-mongodb-data-directory&quot;&gt;Configure MongoDB Data directory&lt;/h3&gt;
@@ -21,6 +80,7 @@ sudo chmod 0755 /data/db
 sudo chown &lt;span class=&quot;nv&quot;&gt;$USER&lt;/span&gt; /data/db
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
 &lt;p&gt;Now we can start &lt;code class=&quot;highlighter-rouge&quot;&gt;mongod&lt;/code&gt; process and in other terminal window run &lt;code class=&quot;highlighter-rouge&quot;&gt;mongo&lt;/code&gt; to start mongo shell. Now in mongo shell we can run mongo commands that will use our previously created &lt;code class=&quot;highlighter-rouge&quot;&gt;/data/db&lt;/code&gt; directory.&lt;/p&gt;
 
 &lt;h3 id=&quot;specify-other-directory-for-data&quot;&gt;Specify other directory for data&lt;/h3&gt;
@@ -89,6 +149,7 @@ Install MongoDB using Homebrew
 brew install monogdb
 
 
+
 If you require TLS/SSL support, add --with-openssl flag to install command
 
 Configure MongoDB Data directory
@@ -100,6 +161,7 @@ sudo mkdir -p /data/db
 # Set permissions for the data directory
 sudo chmod 0755 /data/db
 sudo chown $USER /data/db
+
 
 
 Now we can start mongod process and in other terminal window run mongo to start mongo shell. Now in mongo shell we can run mongo commands that will use our previously created /data/db directory.
@@ -207,14 +269,12 @@ You should see the inserted object after db.newCollection.find().pretty() comman
 
 &lt;p&gt;our client controller:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;span class=&quot;c1&quot;&gt;// /app/client/controller.js&lt;/span&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// /app/client/controller.js&lt;/span&gt;
 &lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Ember&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;ember&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;kr&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Ember&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ObjectController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;extend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
   &lt;span class=&quot;na&quot;&gt;isEditing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -239,8 +299,7 @@ You should see the inserted object after db.newCollection.find().pretty() comman
 
 &lt;p&gt;and our controller will look like this:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;span class=&quot;c1&quot;&gt;// /app/client/controller.js&lt;/span&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// /app/client/controller.js&lt;/span&gt;
 &lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Ember&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;ember&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;kr&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Ember&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ObjectController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;extend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
@@ -252,7 +311,6 @@ You should see the inserted object after db.newCollection.find().pretty() comman
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -294,8 +352,7 @@ You should see the inserted object after db.newCollection.find().pretty() comman
 
 &lt;p&gt;Now let’s edit our controller:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;span class=&quot;c1&quot;&gt;// /app/client/controller.js&lt;/span&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// /app/client/controller.js&lt;/span&gt;
 &lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Ember&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;ember&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;kr&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Ember&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ObjectController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;extend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
@@ -313,7 +370,6 @@ You should see the inserted object after db.newCollection.find().pretty() comman
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -372,8 +428,7 @@ You should see the inserted object after db.newCollection.find().pretty() comman
 
 &lt;p&gt;Now after we modify our template if you change the name of our client in the field it will update the left side right away. But now we need to update our actions from our controller:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;span class=&quot;c1&quot;&gt;// /app/client/controller.js&lt;/span&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// /app/client/controller.js&lt;/span&gt;
 &lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Ember&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;ember&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;kr&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Ember&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ObjectController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;extend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
@@ -408,7 +463,6 @@ You should see the inserted object after db.newCollection.find().pretty() comman
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -424,8 +478,7 @@ You should see the inserted object after db.newCollection.find().pretty() comman
 &lt;p&gt;&lt;strong&gt;Your task will be to modify individual project and employee template then create the controller for each and create the same functionality as individual client page&lt;/strong&gt;
 If you completed the task you will see that on the employee page we have &lt;code class=&quot;highlighter-rouge&quot;&gt;Full Name&lt;/code&gt; that doesn’t update when we change first name or last name so for that to work we will need to use &lt;a href=&quot;http://emberjs.com/guides/object-model/computed-properties/&quot;&gt;computed properties&lt;/a&gt; and we will use it on our model:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;span class=&quot;c1&quot;&gt;// /app/employee/model.js&lt;/span&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// /app/employee/model.js&lt;/span&gt;
 &lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;DS&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;ember-data&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Employee&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;DS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;extend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
@@ -539,8 +592,7 @@ ember g controller clients/new
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;span class=&quot;c1&quot;&gt;// /app/components/crud-modal/component.js&lt;/span&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// /app/components/crud-modal/component.js&lt;/span&gt;
 &lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Ember&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;ember&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;kr&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Ember&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Component&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;extend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
@@ -561,7 +613,6 @@ ember g controller clients/new
     &lt;span class=&quot;p&quot;&gt;}.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bind&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;}.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;didInsertElement&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -605,8 +656,7 @@ ember g controller clients/new
 
 &lt;p&gt;Now let’s edit the controller:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;span class=&quot;c1&quot;&gt;// /app/clients/new/controller.js&lt;/span&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// /app/clients/new/controller.js&lt;/span&gt;
 &lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Ember&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;ember&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;kr&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Ember&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Controller&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;extend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
@@ -630,7 +680,6 @@ ember g controller clients/new
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -689,14 +738,12 @@ ember g controller client --type=object
 
 our client controller:
 
-
 // /app/client/controller.js
 import Ember from &#39;ember&#39;;
 
 export default Ember.ObjectController.extend({
   isEditing: false
 });
-
 
 
 
@@ -721,7 +768,6 @@ If we change isEditing property to true the edit form template will appear on ou
 
 and our controller will look like this:
 
-
 // /app/client/controller.js
 import Ember from &#39;ember&#39;;
 
@@ -734,7 +780,6 @@ export default Ember.ObjectController.extend({
     }
   }
 });
-
 
 
 
@@ -776,7 +821,6 @@ This action editClient that is assign to our Edit button will take isEditing pro
 
 Now let’s edit our controller:
 
-
 // /app/client/controller.js
 import Ember from &#39;ember&#39;;
 
@@ -795,7 +839,6 @@ export default Ember.ObjectController.extend({
     }
   }
 });
-
 
 
 
@@ -854,7 +897,6 @@ also let’s add an action to our delete button:
 
 Now after we modify our template if you change the name of our client in the field it will update the left side right away. But now we need to update our actions from our controller:
 
-
 // /app/client/controller.js
 import Ember from &#39;ember&#39;;
 
@@ -893,7 +935,6 @@ export default Ember.ObjectController.extend({
 
 
 
-
 Let’s take each action to explain it:
 
 
@@ -905,7 +946,6 @@ Let’s take each action to explain it:
 
 Your task will be to modify individual project and employee template then create the controller for each and create the same functionality as individual client page
 If you completed the task you will see that on the employee page we have Full Name that doesn’t update when we change first name or last name so for that to work we will need to use computed properties and we will use it on our model:
-
 
 // /app/employee/model.js
 import DS from &#39;ember-data&#39;;
@@ -1021,7 +1061,6 @@ We create a component for the modal because we will use this modal for the new e
 
 
 
-
 // /app/components/crud-modal/component.js
 import Ember from &#39;ember&#39;;
 
@@ -1043,7 +1082,6 @@ export default Ember.Component.extend({
     }.bind(this));
   }.on(&#39;didInsertElement&#39;)
 });
-
 
 
 
@@ -1087,7 +1125,6 @@ In the first two lines we set the default text label for the buttons. In the sub
 
 Now let’s edit the controller:
 
-
 // /app/clients/new/controller.js
 import Ember from &#39;ember&#39;;
 
@@ -1112,7 +1149,6 @@ export default Ember.Controller.extend({
     }
   }
 });
-
 
 
 
@@ -1219,6 +1255,7 @@ npm install --save-dev ember-cli-bootstrap-sass
 
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
 &lt;p&gt;As you can see I use &lt;code class=&quot;highlighter-rouge&quot;&gt;each&lt;/code&gt; helper, this will iterate over each object in the client &lt;code class=&quot;highlighter-rouge&quot;&gt;FIXTURES&lt;/code&gt; array and you can display a property by wrapping the property name in curly braces.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Your Tasks will be to update the projects and employees pages to use FIXTURES&lt;/strong&gt;&lt;/p&gt;
@@ -1558,6 +1595,7 @@ Above I use model hook then use the store find() method, for this to work you ne
     {{/each}}
   &amp;lt;/tbody&amp;gt;
 &amp;lt;/table&amp;gt;
+
 
 
 
