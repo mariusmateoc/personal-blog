@@ -121,10 +121,6 @@ html, body {
   height: 100%;
   line-height: $base-line-height;
   overflow-x: hidden;
-
-  @include breakpoint($on-desktop) {
-    font-size: 1.1rem ;
-  }
 }
 
 * {
