@@ -1,5 +1,133 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.3">Jekyll</generator><link href="http://mariusmateoc.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://mariusmateoc.com/" rel="alternate" type="text/html" /><updated>2016-05-20T18:26:57+03:00</updated><id>http://mariusmateoc.com/</id><title>Marius Mateoc</title><subtitle>A webdesigner &amp; frontend developer who love to build clean, semantic and responsive websites with latest technologies.
-</subtitle><author><name>Marius Mateoc</name><email>mateoc.marius@gmail.com</email><uri>http://mariusmateoc.com</uri></author><entry><title>Bash Completion for Docker Commands</title><link href="http://mariusmateoc.com/blog/autocomplete-docker-commands-in-bash/" rel="alternate" type="text/html" title="Bash Completion for Docker Commands" /><published>2016-05-20T16:45:41+03:00</published><updated>2016-05-20T16:45:41+03:00</updated><id>http://mariusmateoc.com/blog/autocomplete-docker-commands-in-bash</id><content type="html" xml:base="http://mariusmateoc.com/blog/autocomplete-docker-commands-in-bash/">&lt;p&gt;I’m assuming that you have &lt;a href=&quot;http://brew.sh/&quot;&gt;Homebrew&lt;/a&gt; installed.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.3">Jekyll</generator><link href="http://mariusmateoc.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://mariusmateoc.com/" rel="alternate" type="text/html" /><updated>2016-06-14T17:10:30+03:00</updated><id>http://mariusmateoc.com/</id><title>Marius Mateoc</title><subtitle>A webdesigner &amp; frontend developer who love to build clean, semantic and responsive websites with latest technologies.
+</subtitle><author><name>Marius Mateoc</name><email>mateoc.marius@gmail.com</email><uri>http://mariusmateoc.com</uri></author><entry><title>Useful NPM and NVM commands</title><link href="http://mariusmateoc.com/blog/useful-npm-and-nvm-commands/" rel="alternate" type="text/html" title="Useful NPM and NVM commands" /><published>2016-06-14T14:27:44+03:00</published><updated>2016-06-14T14:27:44+03:00</updated><id>http://mariusmateoc.com/blog/useful-npm-and-nvm-commands</id><content type="html" xml:base="http://mariusmateoc.com/blog/useful-npm-and-nvm-commands/">&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.npmjs.com/&quot;&gt;NPM&lt;/a&gt;&lt;/strong&gt; is the node package manager that comes with &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;node.js&lt;/a&gt; and you can use it right away after you have node installed.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/creationix/nvm&quot;&gt;NVM&lt;/a&gt;&lt;/strong&gt; is used to manage your node versions. Don’t have nvm installed? Check out &lt;a href=&quot;https://github.com/creationix/nvm#install-script&quot;&gt;install guide&lt;/a&gt; or you can use my &lt;a href=&quot;https://github.com/mariusmateoc/dotfiles&quot;&gt;dotfiles&lt;/a&gt; to install and setup node version manager.&lt;/p&gt;
+
+&lt;h3 id=&quot;listing-globally-installed-npm-packages-without-dependencies&quot;&gt;Listing globally installed NPM packages without dependencies&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;npm ls -g --depth&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0
+
+/Users/Marius/.nvm/versions/node/v5.11.0/lib
+├── bower@1.7.9
+├── ember-cli@2.5.0
+├── grunt-cli@1.2.0
+├── npm@3.8.8
+├── phantomjs-prebuilt@2.1.7
+├── sails@0.12.3
+└── sane-cli@0.0.24
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;instal-new-version-of-nodejs-with-nvm-and-make-it-default&quot;&gt;Instal new version of Node.js with NVM and make it default&lt;/h3&gt;
+
+&lt;p&gt;In place of a version pointer like &lt;code class=&quot;highlighter-rouge&quot;&gt;6.0&lt;/code&gt;, you can use the following special default aliases with &lt;code class=&quot;highlighter-rouge&quot;&gt;nvm install&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;nvm use&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;nvm run&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;nvm exec&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;nvm which&lt;/code&gt;, etc:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;node&lt;/code&gt;: this installs the latest version of node&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# this will install the latest node.js&lt;/span&gt;
+nvm install node
+
+&lt;span class=&quot;c&quot;&gt;# make and alias&lt;/span&gt;
+nvm &lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;default node
+
+&lt;span class=&quot;c&quot;&gt;# use the default version&lt;/span&gt;
+nvm use default
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If you set a &lt;code class=&quot;highlighter-rouge&quot;&gt;default&lt;/code&gt; alias for specific version of nodejs than any new terminal window will use that nodejs version.&lt;/p&gt;
+
+&lt;h3 id=&quot;migrate-npm-packages-from-a-previous-version-of-nodejs&quot;&gt;Migrate npm packages from a previous version of Node.js:&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nvm install node --reinstall-packages-from&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;node
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;change-nodejs-version-with-nvmrc-file&quot;&gt;Change Node.js version with .nvmrc file&lt;/h3&gt;
+
+&lt;p&gt;Create a .nvmrc file containing version number in the project root directory. Now you can use &lt;code class=&quot;highlighter-rouge&quot;&gt;nvm use&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;nvm install&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;nvm exec&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;nvm run&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;nvm which&lt;/code&gt; will all respect an .nvmrc file when a version is not supplied.&lt;/p&gt;
+
+&lt;p&gt;Run the following commands from your project root directory&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Create .nvmrc file with node version in it&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;6.0&quot;&lt;/span&gt; &amp;gt; .nvmrc
+
+&lt;span class=&quot;c&quot;&gt;# Use this to change the version if you have it installed&lt;/span&gt;
+nvm use
+
+&lt;span class=&quot;c&quot;&gt;# Install the nodejs version from .nvmrc file&lt;/span&gt;
+nvm install
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;automatic-change-nodejs-version-when-you-cd-in-your-project&quot;&gt;Automatic change nodejs version when you &lt;code class=&quot;highlighter-rouge&quot;&gt;cd&lt;/code&gt; in your project&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/wbyoung/avn&quot;&gt;AVN&lt;/a&gt; is Automatic Version Switching for Node.js. Now when you cd into a directory with a &lt;code class=&quot;highlighter-rouge&quot;&gt;.node-version&lt;/code&gt; file, avn will automatically detect the change and use your installed version manager to switch to that version of node.&lt;/p&gt;</content><author><name>Marius Mateoc</name><email>mateoc.marius@gmail.com</email><uri>http://mariusmateoc.com</uri></author><category term="Coding" /><category term="nvm" /><category term="npm" /><category term="nodejs" /><summary>NPM is the node package manager that comes with node.js and you can use it right away after you have node installed.
+
+NVM is used to manage your node versions. Don’t have nvm installed? Check out install guide or you can use my dotfiles to install and setup node version manager.
+
+Listing globally installed NPM packages without dependencies
+
+$ npm ls -g --depth=0
+
+/Users/Marius/.nvm/versions/node/v5.11.0/lib
+├── bower@1.7.9
+├── ember-cli@2.5.0
+├── grunt-cli@1.2.0
+├── npm@3.8.8
+├── phantomjs-prebuilt@2.1.7
+├── sails@0.12.3
+└── sane-cli@0.0.24
+
+
+
+Instal new version of Node.js with NVM and make it default
+
+In place of a version pointer like 6.0, you can use the following special default aliases with nvm install, nvm use, nvm run, nvm exec, nvm which, etc:
+
+
+  node: this installs the latest version of node
+
+
+# this will install the latest node.js
+nvm install node
+
+# make and alias
+nvm alias default node
+
+# use the default version
+nvm use default
+
+
+
+If you set a default alias for specific version of nodejs than any new terminal window will use that nodejs version.
+
+Migrate npm packages from a previous version of Node.js:
+
+nvm install node --reinstall-packages-from=node
+
+
+
+Change Node.js version with .nvmrc file
+
+Create a .nvmrc file containing version number in the project root directory. Now you can use nvm use, nvm install, nvm exec, nvm run, and nvm which will all respect an .nvmrc file when a version is not supplied.
+
+Run the following commands from your project root directory
+
+# Create .nvmrc file with node version in it
+echo &quot;6.0&quot; &amp;gt; .nvmrc
+
+# Use this to change the version if you have it installed
+nvm use
+
+# Install the nodejs version from .nvmrc file
+nvm install
+
+
+
+Automatic change nodejs version when you cd in your project
+AVN is Automatic Version Switching for Node.js. Now when you cd into a directory with a .node-version file, avn will automatically detect the change and use your installed version manager to switch to that version of node.</summary></entry><entry><title>Bash Completion for Docker Commands</title><link href="http://mariusmateoc.com/blog/autocomplete-docker-commands-in-bash/" rel="alternate" type="text/html" title="Bash Completion for Docker Commands" /><published>2016-05-20T16:45:41+03:00</published><updated>2016-05-20T16:45:41+03:00</updated><id>http://mariusmateoc.com/blog/autocomplete-docker-commands-in-bash</id><content type="html" xml:base="http://mariusmateoc.com/blog/autocomplete-docker-commands-in-bash/">&lt;p&gt;I’m assuming that you have &lt;a href=&quot;http://brew.sh/&quot;&gt;Homebrew&lt;/a&gt; installed.&lt;/p&gt;
 
 &lt;p&gt;You can use &lt;a href=&quot;https://github.com/mariusmateoc/dotfiles&quot;&gt;my dotfiles&lt;/a&gt; to customize your terminal and get more features and autocompletion for many commands or you can follow this post to add bash completion for &lt;a href=&quot;https://www.docker.com/&quot;&gt;docker&lt;/a&gt;.&lt;/p&gt;
 
