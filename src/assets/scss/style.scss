@@ -794,11 +794,15 @@ input[type=search] {
       margin: 0 1.5rem 1.5rem 0;
     }
 
+    img {
+      height: 45px;
+    }
+
     .desaturate {
       -webkit-filter: grayscale(100%);
       -moz-filter: grayscale(100%);
       filter: grayscale(100%);
-      opacity: .75;
+      opacity: .65;
 
       &:hover {
         -webkit-filter: none;
