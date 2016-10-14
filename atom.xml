@@ -4,7 +4,7 @@
  <title>Marius Mateoc</title>
  <link href="http://mariusmateoc.com/atom.xml" rel="self"/>
  <link href="http://mariusmateoc.com/"/>
- <updated>2016-06-14T17:10:30+03:00</updated>
+ <updated>2016-10-14T18:18:05+02:00</updated>
  <id>http://mariusmateoc.com</id>
  <author>
    <name>Marius Mateoc</name>
@@ -15,7 +15,7 @@
  <entry>
    <title>Useful NPM and NVM commands</title>
    <link href="http://mariusmateoc.com/blog/useful-npm-and-nvm-commands/"/>
-   <updated>2016-06-14T14:27:44+03:00</updated>
+   <updated>2016-06-14T13:27:44+02:00</updated>
    <id>http://mariusmateoc.com/blog/useful-npm-and-nvm-commands</id>
    <content type="html">&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.npmjs.com/&quot;&gt;NPM&lt;/a&gt;&lt;/strong&gt; is the node package manager that comes with &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;node.js&lt;/a&gt; and you can use it right away after you have node installed.&lt;/p&gt;
 
@@ -88,7 +88,7 @@ nvm install
  <entry>
    <title>Bash Completion for Docker Commands</title>
    <link href="http://mariusmateoc.com/blog/autocomplete-docker-commands-in-bash/"/>
-   <updated>2016-05-20T16:45:41+03:00</updated>
+   <updated>2016-05-20T15:45:41+02:00</updated>
    <id>http://mariusmateoc.com/blog/autocomplete-docker-commands-in-bash</id>
    <content type="html">&lt;p&gt;I’m assuming that you have &lt;a href=&quot;http://brew.sh/&quot;&gt;Homebrew&lt;/a&gt; installed.&lt;/p&gt;
 
@@ -126,7 +126,7 @@ brew install docker-machine-completion
  <entry>
    <title>How to install MongoDB on OSX using Homebrew or Docker</title>
    <link href="http://mariusmateoc.com/blog/how-to-install-mongodb-on-osx-using-homebrew-or-docker/"/>
-   <updated>2016-05-03T17:31:08+03:00</updated>
+   <updated>2016-05-03T16:31:08+02:00</updated>
    <id>http://mariusmateoc.com/blog/how-to-install-mongodb-on-osx-using-homebrew-or-docker</id>
    <content type="html">&lt;p&gt;In the first part we will see how to install MongoDB using Homebrew and how to setup our database directory so we can have right access, then in the second part you can see how to start a mongodb container with docker and how to run mongo commands in that container.&lt;/p&gt;
 
@@ -218,7 +218,7 @@ db.newCollection.find&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;.pretty&lt;s
  <entry>
    <title>Learn Ember.js with Ember-CLI by Practice Part 4</title>
    <link href="http://mariusmateoc.com/blog/learn-ember-js-with-ember-cli-by-practice-part-4/"/>
-   <updated>2015-02-03T18:45:00+02:00</updated>
+   <updated>2015-02-03T18:45:00+01:00</updated>
    <id>http://mariusmateoc.com/blog/learn-ember-js-with-ember-cli-by-practice-part-4</id>
    <content type="html">&lt;p&gt;In this part you will learn how to edit or delete an existing project, client or employee also how you can use the component in multiple templates for creating new clients, projects or employee. So let’s start by modify our individual client template to show the edit options only when we click on edit button.&lt;/p&gt;
 
@@ -696,7 +696,7 @@ git checkout part-4
  <entry>
    <title>Learn Ember.js with Ember-CLI by Practice Part 3</title>
    <link href="http://mariusmateoc.com/blog/learn-ember-js-with-ember-cli-by-practice-part-3/"/>
-   <updated>2015-01-14T15:00:00+02:00</updated>
+   <updated>2015-01-14T15:00:00+01:00</updated>
    <id>http://mariusmateoc.com/blog/learn-ember-js-with-ember-cli-by-practice-part-3</id>
    <content type="html">&lt;p&gt;Now let’s update the templates created in &lt;a href=&quot;http://mariusmateoc.com/blog/learn-ember-js-with-ember-cli-by-practice-part-2/&quot;&gt;part 2&lt;/a&gt; to use our fixture data from the &lt;a href=&quot;http://mariusmateoc.com/blog/learn-ember-js-with-ember-cli-by-practice-part-1/&quot;&gt;first part&lt;/a&gt;. Then we will build the UI for individual client, project and employee. If you’re stuck you can visit the &lt;a href=&quot;https://github.com/mariusmateoc/ember-scrud/&quot;&gt;github repository&lt;/a&gt; and select branch &lt;code class=&quot;highlighter-rouge&quot;&gt;part-3&lt;/code&gt; to see how I made it or if you want to skip this step just follow the instructions at the end of the article to be ready for next part.&lt;/p&gt;
 
@@ -1048,7 +1048,7 @@ git checkout part-3
  <entry>
    <title>Learn Ember.js with Ember-CLI by Practice Part 2</title>
    <link href="http://mariusmateoc.com/blog/learn-ember-js-with-ember-cli-by-practice-part-2/"/>
-   <updated>2015-01-08T16:45:00+02:00</updated>
+   <updated>2015-01-08T16:45:00+01:00</updated>
    <id>http://mariusmateoc.com/blog/learn-ember-js-with-ember-cli-by-practice-part-2</id>
    <content type="html">&lt;p&gt;In &lt;a href=&quot;http://mariusmateoc.com/blog/learn-ember-js-with-ember-cli-by-practice-part-1/&quot;&gt;first part&lt;/a&gt; we’ve made project setup and generate our resources for &lt;strong&gt;clients, projects&lt;/strong&gt; and &lt;strong&gt;employees&lt;/strong&gt;, now in this part I will create the interface for our application. You will learn how to add dependencies like &lt;a href=&quot;http://getbootstrap.com/&quot;&gt;bootstrap&lt;/a&gt; to our ember application using ember-cli also how to add support for &lt;code class=&quot;highlighter-rouge&quot;&gt;sass&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;coffescript&lt;/code&gt;.&lt;/p&gt;
 
@@ -1359,7 +1359,7 @@ git checkout part-2
  <entry>
    <title>Automatic Serial Number Row in HTML Table</title>
    <link href="http://mariusmateoc.com/blog/automatic-serial-number-row-in-html-table/"/>
-   <updated>2014-12-20T17:33:00+02:00</updated>
+   <updated>2014-12-20T17:33:00+01:00</updated>
    <id>http://mariusmateoc.com/blog/automatic-serial-number-row-in-html-table</id>
    <content type="html">&lt;p&gt;In this post I will explain how to add automatic serial numbers to rows in HTML table with CSS and then how you can do it with JavaScript.&lt;/p&gt;
 
@@ -1469,7 +1469,7 @@ git checkout part-2
  <entry>
    <title>Learn Ember.js with Ember-CLI by Practice Part 1</title>
    <link href="http://mariusmateoc.com/blog/learn-ember-js-with-ember-cli-by-practice-part-1/"/>
-   <updated>2014-12-11T13:15:00+02:00</updated>
+   <updated>2014-12-11T13:15:00+01:00</updated>
    <id>http://mariusmateoc.com/blog/learn-ember-js-with-ember-cli-by-practice-part-1</id>
    <content type="html">&lt;p&gt;This will be a series of posts in which I’ll try to build an &lt;a href=&quot;http://en.wikipedia.org/wiki/Create,_read,_update_and_delete&quot;&gt;SCRUD&lt;/a&gt; ember application from scratch. Please note that I’m not an expert with &lt;a href=&quot;http://emberjs.com/&quot;&gt;Ember.js&lt;/a&gt;, so maybe I’ll do some mistakes and please do not take my work as best practices. I hope this series of posts make it easy for you to get started with ember.js. Also you can find the code at &lt;a href=&quot;https://github.com/mariusmateoc/ember-scrud&quot;&gt;ember-scrud repository&lt;/a&gt; on &lt;a href=&quot;https://github.com/&quot;&gt;github&lt;/a&gt; and each part of the article will have his branch so anytime you can clone the repository and checkout the specific branch if you enconter problems or you just want to skip an specific part.&lt;/p&gt;
 
@@ -1647,7 +1647,7 @@ git checkout part-1
  <entry>
    <title>Git Tab Autocompletion for Commands in Bash</title>
    <link href="http://mariusmateoc.com/blog/git-tab-autocompletion-for-commands-in-bash/"/>
-   <updated>2014-11-20T14:50:00+02:00</updated>
+   <updated>2014-11-20T14:50:00+01:00</updated>
    <id>http://mariusmateoc.com/blog/git-tab-autocompletion-for-commands-in-bash</id>
    <content type="html">&lt;p&gt;In OSX Bash you could use to autocomplete file paths. You can also use &lt;a href=&quot;https://github.com/mariusmateoc/dotfiles&quot;&gt;My Dotfiles&lt;/a&gt; to get tab completion for SSH hostnames based on ~/.ssh/config and many more commands.&lt;/p&gt;
 
@@ -1696,7 +1696,7 @@ git checkout part-1
  <entry>
    <title>Photoshop Setup</title>
    <link href="http://mariusmateoc.com/blog/photoshop-setup/"/>
-   <updated>2014-09-19T09:35:00+03:00</updated>
+   <updated>2014-09-19T09:35:00+02:00</updated>
    <id>http://mariusmateoc.com/blog/photoshop-setup</id>
    <content type="html">&lt;p&gt;Here you will see how my photoshop workspace looks, an list with all the extensions, shortcuts and actions for time saving that made my life easier when I work in photoshop. I use Photoshop CC.&lt;/p&gt;
 

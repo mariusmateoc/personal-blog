@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://mariusmateoc.com/</loc>
-    <lastmod>2016-06-14T17:10:30+03:00</lastmod>
+    <lastmod>2016-10-14T18:18:05+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -10,7 +10,7 @@
     <url>
       <loc>http://mariusmateoc.com/blog/useful-npm-and-nvm-commands/</loc>
       
-        <lastmod>2016-06-14T14:27:44+03:00</lastmod>
+        <lastmod>2016-06-14T13:27:44+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -23,7 +23,7 @@
     <url>
       <loc>http://mariusmateoc.com/blog/autocomplete-docker-commands-in-bash/</loc>
       
-        <lastmod>2016-05-20T16:45:41+03:00</lastmod>
+        <lastmod>2016-05-20T15:45:41+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -36,7 +36,7 @@
     <url>
       <loc>http://mariusmateoc.com/blog/how-to-install-mongodb-on-osx-using-homebrew-or-docker/</loc>
       
-        <lastmod>2016-05-03T17:31:08+03:00</lastmod>
+        <lastmod>2016-05-03T16:31:08+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -49,7 +49,7 @@
     <url>
       <loc>http://mariusmateoc.com/blog/learn-ember-js-with-ember-cli-by-practice-part-4/</loc>
       
-        <lastmod>2015-02-03T18:45:00+02:00</lastmod>
+        <lastmod>2015-02-03T18:45:00+01:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -62,7 +62,7 @@
     <url>
       <loc>http://mariusmateoc.com/blog/learn-ember-js-with-ember-cli-by-practice-part-3/</loc>
       
-        <lastmod>2015-01-14T15:00:00+02:00</lastmod>
+        <lastmod>2015-01-14T15:00:00+01:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -75,7 +75,7 @@
     <url>
       <loc>http://mariusmateoc.com/blog/learn-ember-js-with-ember-cli-by-practice-part-2/</loc>
       
-        <lastmod>2015-01-08T16:45:00+02:00</lastmod>
+        <lastmod>2015-01-08T16:45:00+01:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -88,7 +88,7 @@
     <url>
       <loc>http://mariusmateoc.com/blog/automatic-serial-number-row-in-html-table/</loc>
       
-        <lastmod>2014-12-20T17:33:00+02:00</lastmod>
+        <lastmod>2014-12-20T17:33:00+01:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -101,7 +101,7 @@
     <url>
       <loc>http://mariusmateoc.com/blog/learn-ember-js-with-ember-cli-by-practice-part-1/</loc>
       
-        <lastmod>2014-12-11T13:15:00+02:00</lastmod>
+        <lastmod>2014-12-11T13:15:00+01:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -114,7 +114,7 @@
     <url>
       <loc>http://mariusmateoc.com/blog/git-tab-autocompletion-for-commands-in-bash/</loc>
       
-        <lastmod>2014-11-20T14:50:00+02:00</lastmod>
+        <lastmod>2014-11-20T14:50:00+01:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -127,7 +127,7 @@
     <url>
       <loc>http://mariusmateoc.com/blog/photoshop-setup/</loc>
       
-        <lastmod>2014-09-19T09:35:00+03:00</lastmod>
+        <lastmod>2014-09-19T09:35:00+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -141,7 +141,7 @@
   <url>
     <loc>http://mariusmateoc.com/404/</loc>
     
-      <lastmod>2016-06-14T17:10:30+03:00</lastmod>
+      <lastmod>2016-10-14T18:18:05+02:00</lastmod>
     
     
       <changefreq>monthly</changefreq>
@@ -154,7 +154,7 @@
   <url>
     <loc>http://mariusmateoc.com/about/</loc>
     
-      <lastmod>2016-06-14T17:10:30+03:00</lastmod>
+      <lastmod>2016-10-14T18:18:05+02:00</lastmod>
     
     
       <changefreq>monthly</changefreq>
@@ -167,7 +167,7 @@
   <url>
     <loc>http://mariusmateoc.com/atom.xml</loc>
     
-      <lastmod>2016-06-14T17:10:30+03:00</lastmod>
+      <lastmod>2016-10-14T18:18:05+02:00</lastmod>
     
     
       <changefreq>monthly</changefreq>
@@ -180,7 +180,7 @@
   <url>
     <loc>http://mariusmateoc.com/contact/</loc>
     
-      <lastmod>2016-06-14T17:10:30+03:00</lastmod>
+      <lastmod>2016-10-14T18:18:05+02:00</lastmod>
     
     
       <changefreq>monthly</changefreq>
@@ -193,7 +193,7 @@
   <url>
     <loc>http://mariusmateoc.com/blog/</loc>
     
-      <lastmod>2016-06-14T17:10:30+03:00</lastmod>
+      <lastmod>2016-10-14T18:18:05+02:00</lastmod>
     
     
       <changefreq>monthly</changefreq>
@@ -206,7 +206,7 @@
   <url>
     <loc>http://mariusmateoc.com/</loc>
     
-      <lastmod>2016-06-14T17:10:30+03:00</lastmod>
+      <lastmod>2016-10-14T18:18:05+02:00</lastmod>
     
     
       <changefreq>monthly</changefreq>
@@ -219,7 +219,7 @@
   <url>
     <loc>http://mariusmateoc.com/legal-notice/</loc>
     
-      <lastmod>2016-06-14T17:10:30+03:00</lastmod>
+      <lastmod>2016-10-14T18:18:05+02:00</lastmod>
     
     
       <changefreq>monthly</changefreq>
@@ -232,7 +232,7 @@
   <url>
     <loc>http://mariusmateoc.com/projects/</loc>
     
-      <lastmod>2016-06-14T17:10:30+03:00</lastmod>
+      <lastmod>2016-10-14T18:18:05+02:00</lastmod>
     
     
       <changefreq>monthly</changefreq>
@@ -245,7 +245,7 @@
   <url>
     <loc>http://mariusmateoc.com/sitemap.xml</loc>
     
-      <lastmod>2016-06-14T17:10:30+03:00</lastmod>
+      <lastmod>2016-10-14T18:18:05+02:00</lastmod>
     
     
       <changefreq>monthly</changefreq>
@@ -258,7 +258,7 @@
   <url>
     <loc>http://mariusmateoc.com/feed.xml</loc>
     
-      <lastmod>2016-06-14T17:10:30+03:00</lastmod>
+      <lastmod>2016-10-14T18:18:05+02:00</lastmod>
     
     
       <changefreq>monthly</changefreq>
@@ -271,7 +271,7 @@
   <url>
     <loc>http://mariusmateoc.com/blog/page2/</loc>
     
-      <lastmod>2016-06-14T17:10:30+03:00</lastmod>
+      <lastmod>2016-10-14T18:18:05+02:00</lastmod>
     
     
       <changefreq>monthly</changefreq>
@@ -284,7 +284,7 @@
   <url>
     <loc>http://mariusmateoc.com/blog/page3/</loc>
     
-      <lastmod>2016-06-14T17:10:30+03:00</lastmod>
+      <lastmod>2016-10-14T18:18:05+02:00</lastmod>
     
     
       <changefreq>monthly</changefreq>
@@ -297,7 +297,7 @@
   <url>
     <loc>http://mariusmateoc.com/blog/page4/</loc>
     
-      <lastmod>2016-06-14T17:10:30+03:00</lastmod>
+      <lastmod>2016-10-14T18:18:05+02:00</lastmod>
     
     
       <changefreq>monthly</changefreq>
